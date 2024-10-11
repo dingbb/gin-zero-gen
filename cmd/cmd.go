@@ -1,7 +1,7 @@
 /*
  * @Author: aladdin
  * @Date: 2024-10-10 17:20:37
- * @LastEditTime: 2024-10-11 10:46:39
+ * @LastEditTime: 2024-10-11 15:36:38
  * @LastEditors: aladdin
  * @FilePath: /gin-zero-gen/cmd/cmd.go
  */
@@ -43,6 +43,10 @@ func GenGinCode(cmd *cobra.Command, args []string) error {
 	prepare.ApiFile = args[0]
 	prepare.Setup()
 	Must(generator.GenTypes())
+	Must(generator.GenLogic())
+	Must(generator.GenRoutes())
+	Must(generator.GenHandlers())
+	Must(generator.GenResponse())
 	return nil
 }
 
