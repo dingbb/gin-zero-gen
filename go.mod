@@ -1,6 +1,6 @@
-module github.com/dingbb/gin-zero-gen
+module gin-zero-gen
 
-go 1.22.3
+go 1.20.14
 
 require github.com/zeromicro/go-zero v1.6.5
 
