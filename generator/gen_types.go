@@ -14,7 +14,9 @@ import (
 
 	"github.com/dingbb/gin-zero-gen/prepare"
 	"github.com/dingbb/gin-zero-gen/tpl"
+	"github.com/zeromicro/go-zero/tools/goctl/api/spec"
 	"github.com/zeromicro/go-zero/tools/goctl/util"
+	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 const labelName = "label"

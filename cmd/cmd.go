@@ -1,7 +1,7 @@
 /*
  * @Author: aladdin
  * @Date: 2024-10-10 17:20:37
- * @LastEditTime: 2024-10-10 18:21:00
+ * @LastEditTime: 2024-10-11 10:46:39
  * @LastEditors: aladdin
  * @FilePath: /gin-zero-gen/cmd/cmd.go
  */
@@ -14,6 +14,7 @@ import (
 
 	"github.com/dingbb/gin-zero-gen/generator"
 	"github.com/dingbb/gin-zero-gen/prepare"
+
 	"github.com/spf13/cobra"
 )
 
@@ -27,7 +28,7 @@ var (
 	}
 )
 
-func Exec() {
+func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err.Error())
 		os.Exit(1)

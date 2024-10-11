@@ -1,7 +1,7 @@
 /*
  * @Author: aladdin
  * @Date: 2024-10-10 18:23:58
- * @LastEditTime: 2024-10-10 18:26:32
+ * @LastEditTime: 2024-10-11 14:03:56
  * @LastEditors: aladdin
  * @FilePath: /gin-zero-gen/generator/generator.go
  */
@@ -17,6 +17,7 @@ import (
 	"text/template"
 
 	"github.com/dingbb/gin-zero-gen/prepare"
+
 	"github.com/zeromicro/go-zero/tools/goctl/api/spec"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
@@ -30,6 +31,13 @@ type fileGenConfig struct {
 	templateText string
 	data         any
 }
+
+const (
+	fileNameStyle = "go_zero"
+	dirStyle      = "go/zero"
+
+	groupProperty = "group"
+)
 
 func GenFile(fileName, templateText string, opt ...Option) error {
 	templateName, _, _ := strings.Cut(fileName, ".")
